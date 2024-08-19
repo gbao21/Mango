@@ -35,7 +35,7 @@
                         <td class="table-active">@((item.DiscouuntAmount).ToString())</td>
                         <td class="table-active">@((item.MinAmount).ToString())</td>
                         <td class="table-active">
-                            <a asp-action="DeleteCoupon" asp-route-couponId="@item.CouponId" class="btn btn-danger">
+                            <a asp-action="ViewDeleteCoupon" asp-route-couponId="@item.CouponId" class="btn btn-danger">
                             <i class="bi bi-trash3-fill text-danger"></i>
                             </a>
                         </td>

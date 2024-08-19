@@ -1,0 +1,30 @@
+﻿@model Mango.Web.Models.Models.DTO.CouponDTO
+
+<form asp-action="ViewDeleteCoupon">
+    <fieldset>
+        <input asp-for="CouponId" hidden />
+        <legend class="text-center fs-1">Create Coupon</legend>
+        <div class="mb-3">
+            <label class="form-label">Coupon Code</label>
+            <input asp-for="CouponCode" type="text" disabled class="form-control" placeholder="Disabled input">
+            <span asp-validation-for="CouponCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DiscouuntAmount</label>
+            <input asp-for="DiscouuntAmount" type="text" disabled class="form-control" placeholder="Disabled input">
+            <span asp-validation-for="DiscouuntAmount" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MinAmount</label>
+            <input asp-for="MinAmount" type="text" disabled class="form-control" placeholder="Disabled input">
+            <span asp-validation-for="MinAmount" class="text-danger"></span>
+        </div>
+
+        <button type="submit" value="Delete" class="btn btn-danger">Delete</button>
+        <a asp-action="CouponIndex" class="btn btn-primary">Back to list</a>
+    </fieldset>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
